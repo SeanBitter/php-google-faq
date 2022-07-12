@@ -78,7 +78,18 @@ $db = [
 </head>
 <body>
   <div class="container my-5">
+  
+  <?php
+
+    foreach ($db as $section) {
+      echo "<h2>" . $section["title"] . "</h2>";
+      foreach ($section["paragraphs"] as $paragraph) {
+        echo "<p>" . $paragraph . "</p>";
+      }
+    }
     
+  ?>
+
   </div>
 </body>
 </html>
